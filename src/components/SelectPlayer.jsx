@@ -1,7 +1,9 @@
 function SelectPlayer() {
   return (
     <>
-      <div>test</div>
+      <p>Select Player:</p>
+      <button id="player-x">X</button>
+      <button id="player-o">O</button>
     </>
   );
 }

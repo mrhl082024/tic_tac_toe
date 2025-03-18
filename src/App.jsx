@@ -1,19 +1,26 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Homepage from "./components/Homepage";
+import Gameboard from "./components/Gameboard";
+import Footer from "./components/Footer";
+
 import "./styles/App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 function App() {
+  const [playerTurn, setPlayerTurn] = useState();
+  const handleTurns = () => {
+    setPlayerTurn((e) => !e);
+  };
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Homepage />}>
             <Route path="Gameboard" element={<Gameboard />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      <Outlet />
       <Footer />
     </>
   );
