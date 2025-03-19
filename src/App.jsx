@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
   //Player 1 = x; Player 2 = O;
-  const [player, setPlayer] = useState("");
+  const [player, setPlayer] = useState();
 
   return (
     <>
@@ -28,8 +28,14 @@ function App() {
               />
             }
           />
-          <Route path="/gameboard" element={<Gameboard />} />
-          <Route path="/selectplayer" element={<SelectPlayer />} />
+          <Route
+            path="/gameboard"
+            element={<Gameboard player={player} setPlayer={setPlayer} />}
+          />
+          <Route
+            path="/selectplayer"
+            element={<SelectPlayer setPlayer={setPlayer} />}
+          />
           <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>

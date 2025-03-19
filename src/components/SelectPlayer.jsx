@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const StartGame = ({ player, setPlayer }) => {
+const StartGame = ({ setPlayer }) => {
+  const navigate = useNavigate();
   return (
     <>
       <p>Select Player</p>
-      <Link to="/Gameboard">
-        <button
-          onClick={() => {
-            setPlayer(1);
-          }}
-        >
-          X
-        </button>
-        <button
-          onClick={() => {
-            setPlayer(2);
-          }}
-        >
-          O
-        </button>
-      </Link>
+      <button
+        onClick={() => {
+          navigate("/gameboard");
+          setPlayer(true);
+        }}
+      >
+        X
+      </button>
+      <button
+        onClick={() => {
+          navigate("/gameboard");
+          setPlayer(false);
+        }}
+      >
+        O
+      </button>
     </>
   );
 };

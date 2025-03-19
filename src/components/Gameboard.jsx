@@ -7,7 +7,17 @@ function Gameboard() {
   };
   return (
     <>
-      <div>test</div>
+      <div id="gameboard">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </>
   );
 }
