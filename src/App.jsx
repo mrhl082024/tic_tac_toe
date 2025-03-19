@@ -8,12 +8,9 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
+  //Player 1 = x; Player 2 = O;
   const [player, setPlayer] = useState("");
 
-  const [playerTurn, setPlayerTurn] = useState();
-  const handleTurns = () => {
-    setPlayerTurn((e) => !e);
-  };
   return (
     <>
       <BrowserRouter>
@@ -24,6 +21,8 @@ function App() {
               <Homepage
                 gameStarted={gameStarted}
                 setGameStarted={setGameStarted}
+                player={player}
+                setPlayer={setPlayer}
               />
             }
           >

@@ -1,17 +1,13 @@
 import Hero from "./Hero";
-import StartGame from "./StartGame";
+import SelectPlayer from "./SelectPlayer";
 
-function Homepage({ gameStarted, setGameStarted }) {
+function Homepage({ gameStarted, setGameStarted, player, setPlayer }) {
   return (
     <>
       {gameStarted === false ? (
         <Hero gameStarted={gameStarted} setGameStarted={setGameStarted} />
       ) : (
-        <>
-          <p>Select Player:</p>
-          <button>X</button>
-          <button>O</button>
-        </>
+        <SelectPlayer player={player} setPlayer={setPlayer} />
       )}
     </>
   );
