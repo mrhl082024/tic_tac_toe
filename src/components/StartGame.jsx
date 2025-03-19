@@ -5,7 +5,13 @@ const StartGame = () => {
   return (
     <>
       {gameStarted === false ? (
-        <button>Start Game!</button>
+        <button
+          onClick={() => {
+            setGameStarted(true);
+          }}
+        >
+          Start Game!
+        </button>
       ) : (
         <>
           <p>Select Player</p>

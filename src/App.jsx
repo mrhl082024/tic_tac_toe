@@ -7,6 +7,9 @@ import "./styles/App.css";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 function App() {
+  const [gameStarted, setGameStarted] = useState(false);
+  const [player, setPlayer] = useState("");
+
   const [playerTurn, setPlayerTurn] = useState();
   const handleTurns = () => {
     setPlayerTurn((e) => !e);
