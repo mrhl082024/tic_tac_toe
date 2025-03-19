@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const StartGame = () => {
-  const [gameStarted, setGameStarted] = useState(false);
+const StartGame = ({ gameStarted, setGameStarted }) => {
   return (
     <>
       {gameStarted === false ? (

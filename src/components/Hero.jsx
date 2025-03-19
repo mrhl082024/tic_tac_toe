@@ -1,4 +1,4 @@
-function Hero() {
+function Hero({ gameStarted, setGameStarted }) {
   return (
     <>
       <p>
@@ -7,6 +7,13 @@ function Hero() {
         javascript logic and conditional statements. <br />
         It's nothing fancy, but please enjoy :3
       </p>
+      <button
+        onClick={() => {
+          setGameStarted(true);
+        }}
+      >
+        Start Game!
+      </button>
     </>
   );
 }

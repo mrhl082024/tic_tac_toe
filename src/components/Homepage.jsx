@@ -1,11 +1,18 @@
 import Hero from "./Hero";
 import StartGame from "./StartGame";
 
-function Homepage() {
+function Homepage({ gameStarted, setGameStarted }) {
   return (
     <>
-      <Hero />
-      <StartGame />
+      {gameStarted === false ? (
+        <Hero gameStarted={gameStarted} setGameStarted={setGameStarted} />
+      ) : (
+        <>
+          <p>Select Player:</p>
+          <button>X</button>
+          <button>O</button>
+        </>
+      )}
     </>
   );
 }

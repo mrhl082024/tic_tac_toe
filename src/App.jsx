@@ -18,7 +18,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />}>
+          <Route
+            path="/"
+            element={
+              <Homepage
+                gameStarted={gameStarted}
+                setGameStarted={setGameStarted}
+              />
+            }
+          >
             <Route path="Gameboard" element={<Gameboard />} />
           </Route>
         </Routes>
