@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Homepage from "./components/Homepage";
-import Gameboard from "./components/Gameboard";
-import Footer from "./components/Footer";
+import Homepage from "./components/Homepage.jsx";
+import Gameboard from "./components/Gameboard.jsx";
+import Footer from "./components/Footer.jsx";
 import SelectPlayer from "./components/SelectPlayer.jsx";
 
 import "./styles/App.css";
@@ -27,12 +27,11 @@ function App() {
               />
             }
           >
-            <Route path="/Gameboard" element={<Gameboard />} />
-            <Route path="/SelectPlayer" element={<SelectPlayer />} />
+            <Route path="gameboard" element={<Gameboard />} />
+            <Route path="selectplayer" element={<SelectPlayer />} />
           </Route>
         </Routes>
       </BrowserRouter>
-      <Outlet />
       <Footer />
     </>
   );
