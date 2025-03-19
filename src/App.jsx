@@ -6,7 +6,7 @@ import SelectPlayer from "./components/SelectPlayer.jsx";
 import Test from "./components/Test.jsx";
 
 import "./styles/App.css";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
@@ -27,11 +27,10 @@ function App() {
                 setPlayer={setPlayer}
               />
             }
-          >
-            <Route path="gameboard" element={<Gameboard />} />
-            <Route path="selectplayer" element={<SelectPlayer />} />
-            <Route path="test" element={<Test />} />
-          </Route>
+          />
+          <Route path="/gameboard" element={<Gameboard />} />
+          <Route path="/selectplayer" element={<SelectPlayer />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -11,8 +11,8 @@ function Hero({ gameStarted, setGameStarted }) {
       </p>
       <button
         onClick={() => {
-          // setGameStarted(true);
-          navigate("/test");
+          setGameStarted(true);
+          navigate("/selectplayer");
         }}
       >
         Start Game!
