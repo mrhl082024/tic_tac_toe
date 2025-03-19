@@ -2,6 +2,7 @@ import { useState } from "react";
 import Homepage from "./components/Homepage";
 import Gameboard from "./components/Gameboard";
 import Footer from "./components/Footer";
+import SelectPlayer from "./components/SelectPlayer.jsx";
 
 import "./styles/App.css";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
@@ -26,7 +27,8 @@ function App() {
               />
             }
           >
-            <Route path="Gameboard" element={<Gameboard />} />
+            <Route path="/Gameboard" element={<Gameboard />} />
+            <Route path="/SelectPlayer" element={<SelectPlayer />} />
           </Route>
         </Routes>
       </BrowserRouter>

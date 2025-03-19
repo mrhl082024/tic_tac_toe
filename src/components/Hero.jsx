@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Hero({ gameStarted, setGameStarted }) {
   return (
     <>
@@ -7,13 +8,15 @@ function Hero({ gameStarted, setGameStarted }) {
         javascript logic and conditional statements. <br />
         It's nothing fancy, but please enjoy :3
       </p>
-      <button
-        onClick={() => {
-          setGameStarted(true);
-        }}
-      >
-        Start Game!
-      </button>
+      <Link to="SelectPlayer">
+        <button
+          onClick={() => {
+            setGameStarted(true);
+          }}
+        >
+          Start Game!
+        </button>
+      </Link>
     </>
   );
 }

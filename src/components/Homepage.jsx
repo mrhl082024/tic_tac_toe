@@ -7,7 +7,7 @@ function Homepage({ gameStarted, setGameStarted, player, setPlayer }) {
       {gameStarted === false ? (
         <Hero gameStarted={gameStarted} setGameStarted={setGameStarted} />
       ) : (
-        <SelectPlayer player={player} setPlayer={setPlayer} />
+        false
       )}
     </>
   );
