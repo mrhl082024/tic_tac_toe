@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 function Hero({ gameStarted, setGameStarted }) {
+  const navigate = useNavigate();
   return (
     <>
       <p>
@@ -8,15 +9,14 @@ function Hero({ gameStarted, setGameStarted }) {
         javascript logic and conditional statements. <br />
         It's nothing fancy, but please enjoy :3
       </p>
-      <Link to="SelectPlayer">
-        <button
-          onClick={() => {
-            setGameStarted(true);
-          }}
-        >
-          Start Game!
-        </button>
-      </Link>
+      <button
+        onClick={() => {
+          // setGameStarted(true);
+          navigate("/test");
+        }}
+      >
+        Start Game!
+      </button>
     </>
   );
 }

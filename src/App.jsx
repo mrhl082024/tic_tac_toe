@@ -3,6 +3,7 @@ import Homepage from "./components/Homepage.jsx";
 import Gameboard from "./components/Gameboard.jsx";
 import Footer from "./components/Footer.jsx";
 import SelectPlayer from "./components/SelectPlayer.jsx";
+import Test from "./components/Test.jsx";
 
 import "./styles/App.css";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
@@ -29,6 +30,7 @@ function App() {
           >
             <Route path="gameboard" element={<Gameboard />} />
             <Route path="selectplayer" element={<SelectPlayer />} />
+            <Route path="test" element={<Test />} />
           </Route>
         </Routes>
       </BrowserRouter>
