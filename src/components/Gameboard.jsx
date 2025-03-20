@@ -6,7 +6,7 @@ function Gameboard({ player, setPlayer }) {
     setPlayer((e) => !e);
   };
   const [gameboard, setGameboard] = useState([
-    "test",
+    "",
     "",
     "",
     "",
@@ -26,11 +26,19 @@ function Gameboard({ player, setPlayer }) {
             id={"box" + id}
             key={id}
             onClick={() => {
-              setGameboard(
-                gameboard.map((maptile, i) => (i === id ? "x" : maptile))
-              );
-              handleTurns();
-              console.log(player);
+              if (player) {
+                setGameboard(
+                  gameboard.map((maptile, i) => (i === id ? "X" : maptile))
+                );
+                handleTurns();
+                console.log(player);
+              } else {
+                setGameboard(
+                  gameboard.map((maptile, i) => (i === id ? "O" : maptile))
+                );
+                handleTurns();
+                console.log(player);
+              }
             }}
           >
             {tile}
