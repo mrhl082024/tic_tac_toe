@@ -24,7 +24,6 @@ function Gameboard({ player, setPlayer, setGameStarted }) {
   function resetGame() {
     setGameboard(["", "", "", "", "", "", "", "", ""]);
     setMessage("");
-    console.log(gameboard);
   }
   function whoWins() {
     if (
@@ -54,6 +53,7 @@ function Gameboard({ player, setPlayer, setGameStarted }) {
   }
 
   useEffect(() => whoWins(), [gameboard]);
+
   return (
     <>
       {" "}
