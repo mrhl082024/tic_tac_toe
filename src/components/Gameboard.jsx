@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Gameboard.css";
 
 function Gameboard({ player, setPlayer }) {
+  const navigate = useNavigate();
   const handleTurns = () => {
     setPlayer((e) => !e);
   };
@@ -16,9 +18,21 @@ function Gameboard({ player, setPlayer }) {
     "",
     "",
   ]);
+  function resetGame() {
+    setGameboard(["", "", "", "", "", "", "", "", ""]);
+    console.log(gameboard);
+  }
 
   return (
     <>
+      {" "}
+      <button
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Homepage
+      </button>
       <div id="gameboard">
         {gameboard.map((tile, id) => (
           <div
@@ -45,6 +59,13 @@ function Gameboard({ player, setPlayer }) {
           </div>
         ))}
       </div>
+      <button
+        onClick={() => {
+          resetGame();
+        }}
+      >
+        Reset
+      </button>
     </>
   );
 }
