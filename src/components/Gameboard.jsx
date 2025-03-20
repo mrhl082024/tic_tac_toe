@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Gameboard.css";
 
-function Gameboard({ player, setPlayer }) {
+function Gameboard({ player, setPlayer, setGameStarted }) {
   const navigate = useNavigate();
   const handleTurns = () => {
     setPlayer((e) => !e);
@@ -28,6 +28,7 @@ function Gameboard({ player, setPlayer }) {
       {" "}
       <button
         onClick={() => {
+          setGameStarted(false);
           navigate("/");
         }}
       >

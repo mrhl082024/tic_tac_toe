@@ -30,7 +30,13 @@ function App() {
           />
           <Route
             path="/gameboard"
-            element={<Gameboard player={player} setPlayer={setPlayer} />}
+            element={
+              <Gameboard
+                player={player}
+                setPlayer={setPlayer}
+                setGameStarted={setGameStarted}
+              />
+            }
           />
           <Route
             path="/selectplayer"
